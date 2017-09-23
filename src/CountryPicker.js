@@ -48,6 +48,8 @@ if (isEmojiable) {
 
 export const getAllCountries = () => cca2List.map((cca2) => ({ ...countries[cca2], cca2 }));
 
+export const getAllCountryCodes = () => cca2List
+
 const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
 export default class CountryPicker extends Component {
@@ -282,13 +284,24 @@ export default class CountryPicker extends Component {
     return (
       <View style={styles.itemCountry}>
         {CountryPicker.renderFlag(cca2)}
-        <View style={styles.itemCountryName}>
+        <View style={styles.itemCountryInfos}>
+          {this.renderCallingCode(cca2)}
           <Text style={styles.countryName}>
-            {this.getCountryName(country)}
+            {`\t${this.getCountryName(country)}`}
           </Text>
         </View>
       </View>
     );
+  }
+
+  renderCallingCode(cca2) {
+    const countryCode = countries[cca2].callingCode ? `+${countries[cca2].callingCode}` : null
+
+    return (
+      <Text>
+        {countryCode}
+      </Text>
+    )
   }
 
   render() {
@@ -304,6 +317,7 @@ export default class CountryPicker extends Component {
             :
               (<View style={styles.touchFlag}>
                 {CountryPicker.renderFlag(this.props.cca2)}
+                {this.renderCallingCode(this.props.cca2)}
               </View>)
           }
         </TouchableOpacity>

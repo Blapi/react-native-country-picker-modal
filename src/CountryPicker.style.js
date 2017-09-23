@@ -28,6 +28,7 @@ export default StyleSheet.create({
   touchFlag: {
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'row'
   },
   imgStyle: {
     resizeMode: 'contain',
@@ -59,8 +60,9 @@ export default StyleSheet.create({
     height: getHeightPercent(7),
     width: getWidthPercent(15),
   },
-  itemCountryName: {
-    justifyContent: 'center',
+  itemCountryInfos: {
+    alignItems: 'center',
+    flexDirection: 'row',
     width: getWidthPercent(70),
     borderBottomWidth: 2 / PixelRatio.get(),
     borderBottomColor: '#ccc',
