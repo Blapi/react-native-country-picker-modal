@@ -48,7 +48,7 @@ if (isEmojiable) {
 
 export const getAllCountries = () => cca2List.map((cca2) => ({ ...countries[cca2], cca2 }));
 
-export const getAllCountryCodes = () => cca2List
+export const getCallingCodeForACountryCode = (cca2) => countries[cca2].callingCode
 
 const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
 
