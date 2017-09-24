@@ -30,6 +30,10 @@ export default StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row'
   },
+  chevron: {
+    height: 10,
+    width: 10
+  },
   imgStyle: {
     resizeMode: 'contain',
     width: 25,
@@ -58,7 +62,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: getHeightPercent(7),
-    width: getWidthPercent(15),
+    width: getWidthPercent(10),
   },
   itemCountryInfos: {
     alignItems: 'center',
@@ -70,6 +74,10 @@ export default StyleSheet.create({
   },
   countryName: {
     fontSize: getHeightPercent(2.2),
+  },
+  callingCode: {
+    fontSize: getHeightPercent(2.2),
+    fontWeight: 'bold'
   },
   scrollView: {
     flex: 1,

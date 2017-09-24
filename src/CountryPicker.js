@@ -298,7 +298,7 @@ export default class CountryPicker extends Component {
     const countryCode = countries[cca2].callingCode ? `+${countries[cca2].callingCode}` : null
 
     return (
-      <Text>
+      <Text style={styles.callingCode}>
         {countryCode}
       </Text>
     )
@@ -317,7 +317,10 @@ export default class CountryPicker extends Component {
             :
               (<View style={styles.touchFlag}>
                 {CountryPicker.renderFlag(this.props.cca2)}
-                {this.renderCallingCode(this.props.cca2)}
+                <Image
+                  source={require('./chevron-down.png')}
+                  style={styles.chevron}
+                  resizeMode='contain' />
               </View>)
           }
         </TouchableOpacity>
