@@ -32,7 +32,8 @@ export default StyleSheet.create({
   },
   chevron: {
     height: 10,
-    width: 10
+    width: 10,
+    marginRight: 10
   },
   imgStyle: {
     resizeMode: 'contain',
