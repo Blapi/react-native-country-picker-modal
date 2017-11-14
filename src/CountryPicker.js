@@ -7,9 +7,6 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
 
-// eslint-disable-next-line
-import React, { Component } from 'react';
-
 let PropTypes = null;
 
 // eslint-disable-next-line
